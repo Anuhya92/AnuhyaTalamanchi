@@ -19,7 +19,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <!-- Skip to main content -->
@@ -81,36 +80,24 @@
       <!-- About Section -->
       <section id="about">
         <h2 class="section-title">About <span>Me</span></h2>
-        <div class="about-content">
-          <div class="about-image">
-            <div class="profile-circle">
-              <img
-                src="./images/photo.png"
-                alt="Anuhya Talamanchi"
-                class="profile-img"
-                width="350"
-                height="350"
-              />
-            </div>
-          </div>
-          <div class="about-text">
-            <p>
-              I am a passionate Full-Stack Developer with experience in building
-              responsive and interactive web applications. I love turning
-              complex problems into simple, beautiful, and intuitive designs.
-            </p>
-            <p>
-              With a strong foundation in both front-end and back-end
-              technologies, I create seamless user experiences while ensuring
-              robust functionality. I'm constantly learning and staying updated
-              with the latest web development trends and best practices.
-            </p>
-            <p>
-              My approach to development focuses on clean code, accessibility,
-              and performance optimization to deliver high-quality solutions
-              that exceed expectations.
-            </p>
-          </div>
+
+        <div class="about-text">
+          <p>
+            I am a passionate Full-Stack Developer with experience in building
+            responsive and interactive web applications. I love turning complex
+            problems into simple, beautiful, and intuitive designs.
+          </p>
+          <p>
+            With a strong foundation in both front-end and back-end
+            technologies, I create seamless user experiences while ensuring
+            robust functionality. I'm constantly learning and staying updated
+            with the latest web development trends and best practices.
+          </p>
+          <p>
+            My approach to development focuses on clean code, accessibility, and
+            performance optimization to deliver high-quality solutions that
+            exceed expectations.
+          </p>
         </div>
       </section>
 
@@ -195,7 +182,6 @@
           </article>
         </div>
       </section>
-
       <!-- Projects Section -->
       <section id="projects">
         <h2 class="section-title">My <span>Projects</span></h2>
@@ -294,7 +280,7 @@
         <!-- Keep Connected Section -->
         <div class="footer-section">
           <h3>Keep Connected</h3>
-          <nav class="social-links" aria-label="Social media links">
+          <div class="social-links" aria-label="Social media links">
             <a
               href="https://www.linkedin.com/in/anuhya-talamanchi-376a48263"
               target="_blank"
@@ -315,7 +301,7 @@
               <i class="fab fa-github" aria-hidden="true"></i>
               <span>Follow on GitHub</span>
             </a>
-          </nav>
+          </div>
         </div>
 
         <!-- Contact Information Section -->
@@ -349,7 +335,10 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>&copy; 2026 Anuhya Talamanchi. All Rights Reserved.</p>
+        <p>
+          &copy; <span id="currentYear"></span> Anuhya Talamanchi. All Rights
+          Reserved.
+        </p>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="#company-info">Company Information</a>
           <a href="#privacy">Privacy Policy</a>
@@ -357,5 +346,6 @@
         </nav>
       </div>
     </footer>
+    <script src="./js/index.js" defer></script>
   </body>
 </html>

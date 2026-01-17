@@ -21,7 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Skip to main content link for accessibility */
 .skip-to-main {
   position: absolute;
   left: -9999px;
@@ -38,7 +37,6 @@ body {
   top: 10px;
 }
 
-/* Header & Navigation */
 header {
   background: var(--dark);
   padding: 1rem 0;
@@ -889,6 +887,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 968px) {
+  .hero {
+    min-height: unset;
+  }
+
   .hero-content,
   .about-content,
   .contact-content {

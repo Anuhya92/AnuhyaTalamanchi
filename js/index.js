@@ -351,3 +351,6 @@ document.querySelectorAll(".skill-card").forEach((el) => {
   el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
   scrollObserver.observe(el);
 });
+
+const currentYearVal = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYearVal;
