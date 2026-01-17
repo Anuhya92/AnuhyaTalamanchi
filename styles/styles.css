@@ -21,6 +21,26 @@ body {
   overflow-x: hidden;
 }
 
+.svg-1x {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-2x {
+  color: var(--light);
+  width: 2em;
+  height: 2em;
+}
+
+.svg-3x {
+  width: 3em;
+  height: 3em;
+}
+
+.fa-times {
+  display: none;
+}
+
 .skip-to-main {
   position: absolute;
   left: -9999px;
@@ -88,7 +108,6 @@ nav {
 .menu-toggle {
   display: none;
   background: none;
-  border: 2px solid var(--light);
   color: var(--light);
   font-size: 1.5rem;
   cursor: pointer;

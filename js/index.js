@@ -4,19 +4,23 @@ const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
   const isActive = navLinks.classList.toggle("active");
-  const icon = menuToggle.querySelector("i");
-  icon.classList.toggle("fa-bars");
-  icon.classList.toggle("fa-times");
-  menuToggle.setAttribute("aria-expanded", isActive);
+  if (isActive) {
+    document.querySelector(".fa-bars").style.display = "none";
+    document.querySelector(".fa-times").style.display = "block";
+    menuToggle.setAttribute("aria-expanded", true);
+  } else {
+    document.querySelector(".fa-bars").style.display = "block";
+    document.querySelector(".fa-times").style.display = "none";
+    menuToggle.setAttribute("aria-expanded", false);
+  }
 });
 
 // Close menu when clicking on a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
-    const icon = menuToggle.querySelector("i");
-    icon.classList.add("fa-bars");
-    icon.classList.remove("fa-times");
+    document.querySelector(".fa-bars").style.display = "block";
+    document.querySelector(".fa-times").style.display = "none";
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });
