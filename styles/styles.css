@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary: #7c3aed;
+  --primary: #d658ba;
   --secondary: #a78bfa;
   --dark: #1a1a2e;
   --darker: #0f0f1e;
@@ -98,8 +98,7 @@ nav {
   font-weight: 500;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links li.active {
   color: var(--primary);
   outline: 2px solid var(--primary);
   outline-offset: 4px;
@@ -108,16 +107,28 @@ nav {
 .menu-toggle {
   display: none;
   background: none;
+  border: none;
   color: var(--light);
-  font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
+}
+.menu-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.fa-times {
+  display: none;
 }
 
 /* Hero Section */
@@ -856,26 +867,6 @@ footer {
 .footer-bottom p {
   color: #ccc;
   margin-bottom: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: var(--light);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover,
-.footer-links a:focus {
-  color: var(--primary);
-  outline: 2px solid var(--primary);
-  outline-offset: 4px;
 }
 
 /* Loading Spinner */

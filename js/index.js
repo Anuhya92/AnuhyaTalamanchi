@@ -15,27 +15,15 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
-// Close menu when clicking on a link
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    document.querySelector(".fa-bars").style.display = "block";
-    document.querySelector(".fa-times").style.display = "none";
-    menuToggle.setAttribute("aria-expanded", "false");
-  });
-});
+const navItems = document.querySelectorAll(".nav-links li");
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+// Add click event to each li
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    // Remove active class from all items
+    navItems.forEach((nav) => nav.classList.remove("active"));
+    // Add active class to the clicked item
+    this.classList.add("active");
   });
 });
 
