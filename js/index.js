@@ -321,7 +321,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 // Load projects when page loads
 fetchGitHubProjects();
 
-// Animate elements on scroll (excluding project cards which have their own animation)
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -100px 0px",
